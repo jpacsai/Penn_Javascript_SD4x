@@ -9,7 +9,7 @@ Server-side JavaScript is becoming more prevalent in the industry, with web fram
 ### Week 1: Web Programming Basics
   - Basics of the World Wide Web
   - Developing Web Pages with HTML
-  - **Homework 1:**  
+  - [**Homework 1:**  ](https://github.com/jpacsai/PennX_Javascript_SD4x/tree/master/Week1)
     &nbsp;&nbsp;modify an existing HTML page that uses inline style attributes so that it instead uses an external CSS file
  
 ### Week 2: Using JavaScript to Create Dynamic Web Pages  

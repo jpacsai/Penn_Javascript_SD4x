@@ -8,30 +8,24 @@ Server-side JavaScript is becoming more prevalent in the industry, with web fram
 
 ### Week 1: Web Programming Basics
   - Basics of the World Wide Web
-  - Developing Web Pages with HTML
-  - [**Homework 1:**  ](https://github.com/jpacsai/PennX_Javascript_SD4x/tree/master/Week1)
-    &nbsp;&nbsp;modify an existing HTML page that uses inline style attributes so that it instead uses an external CSS file
+  - Developing Web Pages with HTML  
+  - [x] [**Homework 1:**](https://github.com/jpacsai/PennX_Javascript_SD4x/tree/master/Week1) modify an existing HTML page that uses inline style attributes so that it instead uses an external CSS file
  
 ### Week 2: Using JavaScript to Create Dynamic Web Pages  
   - JavaScript Basics
-  - **Homework 2:**  
-    &nbsp;&nbsp;implement some simple JavaScript functions
+  - [ ] **Homework 2:** implement some simple JavaScript functions
   - Using JavaScript in Web Pages
-  - **Homework 3:**  
-    &nbsp;&nbsp;develop a calculator app using JavaScript and jQuery
+  - [ ] **Homework 3:** develop a calculator app using JavaScript and jQuery
  
 ### Week 3: Client-Side Frameworks for Developing Modular Web Page Components  
   - Developing Web Applications with React
-  - **Homework 4:**  
-    &nbsp;&nbsp;develop a React component that allows the reader of a web page to change the appearance of a piece of text
+  - [ ] **Homework 4:** develop a React component that allows the reader of a web page to change the appearance of a piece of text
   - Advanced Component Design for React
-  - **Homework 5:**  
-    &nbsp;&nbsp;develop a simple application to track lists of items using React
+  - [ ] **Homework 5:** develop a simple application to track lists of items using React
   - Advanced Component Design for React
   - Creating Data-Driven Web Content with D3.js
     
 ### Week 4: Building Scalable Web Apps with Server-Side JavaScript
   - Developing Web Applications with Node.js
   - Databases and Web Applications
-  - **Homework 6:**  
-    &nbsp;&nbsp;use Node.js and Express to develop a Web API that provides services related to data stored in a MongoDB database
+  - [ ] **Homework 6:** use Node.js and Express to develop a Web API that provides services related to data stored in a MongoDB database

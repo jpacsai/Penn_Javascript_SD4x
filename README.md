@@ -13,7 +13,7 @@ Server-side JavaScript is becoming more prevalent in the industry, with web fram
  
 ### Week 2: Using JavaScript to Create Dynamic Web Pages  
   - JavaScript Basics
-  - [ ] **Homework 2:** implement some simple JavaScript functions
+  - [x] [**Homework 2:**](https://github.com/jpacsai/PennX_Javascript_SD4x/tree/master/Week2/homework2) implement some simple JavaScript functions
   - Using JavaScript in Web Pages
   - [ ] **Homework 3:** develop a calculator app using JavaScript and jQuery
  

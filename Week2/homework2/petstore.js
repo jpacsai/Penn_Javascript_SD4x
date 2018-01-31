@@ -8,8 +8,12 @@
  * @return the total amount of pet food that should be ordered for the upcoming
  * 				 week, or -1 if the numAnimals or avgFood are less than 0 or non-numeric
  */
+
 function calculateFoodOrder(numAnimals, avgFood) {
-    // IMPLEMENT THIS FUNCTION!
+    if (numAnimals != isNaN && avgFood != isNaN && numAnimals > 0 && avgFood > 0) {
+      return numAnimals * avgFood;
+    }  
+    return -1;
 }
 
 /**
@@ -21,8 +25,27 @@ function calculateFoodOrder(numAnimals, avgFood) {
  * @param week an array of Weekday objects
  * @return a string containing the name of the most popular day of the week if there is only one most popular day, and an array of the strings containing the names of the most popular days if there are more than one that are most popular
  */
+
 function mostPopularDays(week) {
-    // IMPLEMENT THIS FUNCTION!
+  var max = 0;
+  if (week === null || week.length < 1) {
+      return null;
+  }
+  for (var m = 0; m < week.length; m++) {
+    if (week[m].traffic > max) {
+      max = week[m].traffic;
+    }
+  }
+  var days = [];
+  for (var n = 0; n < week.length; n++) {
+    if (week[n].traffic === max) {
+      days.push(week[n].name);
+    }
+  }
+  if (days.length === 1) {
+    return days[0];
+  }
+  return days;
 }
 
 
@@ -37,8 +60,19 @@ function mostPopularDays(week) {
  * @return an array of Animal objects containing the animals' information, or an
  *         empty array if the array's lengths are unequal or zero, or if any array is null.
  */
+
 function createAnimalObjects(names, types, breeds) {
-    // IMPLEMENT THIS FUNCTION!
+    var animals = [];
+    if (names === null || types === null || breeds === null || names.length != types.length || names.length != breeds.length) { 
+        return animals;
+    }
+    else { 
+        for (var i = 0; i < names.length; i++) {
+                var temp = new Animal(names[i], types[i], breeds[i]);
+                animals.push(temp);
+        }
+        return animals;
+    }
 }
 
 /////////////////////////////////////////////////////////////////

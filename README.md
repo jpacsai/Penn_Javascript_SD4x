@@ -15,7 +15,7 @@ Server-side JavaScript is becoming more prevalent in the industry, with web fram
   - JavaScript Basics
   - [x] [**Homework 2:**](https://github.com/jpacsai/PennX_Javascript_SD4x/tree/master/Week2/homework2) implement some simple JavaScript functions
   - Using JavaScript in Web Pages
-  - [x] **Homework 3:** develop a calculator app using JavaScript and jQuery
+  - [x] [**Homework 3:**](https://github.com/jpacsai/PennX_Javascript_SD4x/tree/master/Week2/homework3) develop a calculator app using JavaScript and jQuery
  
 ### Week 3: Client-Side Frameworks for Developing Modular Web Page Components  
   - Developing Web Applications with React

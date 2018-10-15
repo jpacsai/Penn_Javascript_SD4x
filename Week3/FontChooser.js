@@ -5,22 +5,18 @@ class FontChooser extends React.Component {
 		this.decrease = this.decrease.bind(this);
 
 		this.state = {
-			size: 40,
-			bold: false,
-			min: 4,
-			max: 40,
-			weigth: 'bold'
+			size: 16
 		}
 	}
 
 	decrease() {
 		const d = this.state.size;
-		this.setState({ size: this.state.size > this.state.min ? d - 1 : d })
+		this.setState({ size: this.state.size > this.props.min ? d - 1 : d })
 	}
 
 	increase() {
 		const i = this.state.size;
-		this.setState({ size: this.state.size < this.state.max ? i + 1 : i })
+		this.setState({ size: this.state.size < this.props.max ? i + 1 : i })
 	}
 	
 	render() {
@@ -38,16 +34,20 @@ class FontChooser extends React.Component {
 					alignItems: 'center',
 					marginLeft: '15px'
 				}}>
-					<input type="checkbox" id="boldCheckbox" hidden={this.props.hidden}/>
+					<input 
+						type="checkbox" 
+						id="boldCheckbox" 
+						defaultChecked={ this.props.bold === 'false' ? 'unchecked' : 'checked' }
+						style={{display: this.props.hidden === 'false' ? 'block' : 'none'}}/>
 					<button 
 						id="decreaseButton"
-						hidden={this.props.hidden}
+						style={{display: this.props.hidden === 'false' ? 'block' : 'none'}}
 						onClick={ () => this.decrease() }
 					>-</button>
-					<span id="fontSizeSpan" hidden={this.props.hidden} style={{margin: 'auto 5px'}}>{this.state.size}</span>
+					<span id="fontSizeSpan" hidden={this.props.hidden} style={{margin: 'auto 5px', display: this.props.hidden === 'false' ? 'block' : 'none'}}>{this.state.size}</span>
 					<button
 						id="increaseButton"
-						hidden={this.props.hidden}
+						style={{display: this.props.hidden === 'false' ? 'block' : 'none'}}
 						onClick={ () => this.increase() }
 					>+</button>
 				</div>

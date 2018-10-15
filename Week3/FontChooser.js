@@ -1,12 +1,9 @@
 class FontChooser extends React.Component {
-
-    constructor(props) {
+	constructor(props) {
 		super(props);
-    }
-    
-
-    render() {
-
+	}
+	
+	render() {
 		return(
 			<div>
 				<input type="checkbox" id="boldCheckbox" hidden='true'/>

@@ -14,12 +14,11 @@
 
     <script type="text/jsx">
 
-ReactDOM.render(
-  <div>
-    <FontChooser min='4' max='40' size='16' text='Fun with React!' bold='false'/>
-   </div>,
-document.getElementById('container'))
-;
+      ReactDOM.render(
+        <div>
+          <FontChooser text='Fun with React!' hidden={false}/>
+        </div>,
+      document.getElementById('container'));
 
     </script>
 

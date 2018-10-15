@@ -37,7 +37,7 @@ class FontChooser extends React.Component {
 					<input 
 						type="checkbox" 
 						id="boldCheckbox" 
-						defaultChecked={ this.props.bold === 'false' ? 'unchecked' : 'checked' }
+						defaultChecked={ this.props.bold === 'false' ? false : true }
 						style={{display: this.props.hidden === 'false' ? 'block' : 'none'}}/>
 					<button 
 						id="decreaseButton"

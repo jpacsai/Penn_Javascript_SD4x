@@ -3,9 +3,11 @@ class FontChooser extends React.Component {
 		super(props);
 
 		this.decrease = this.decrease.bind(this);
+		this.increase = this.increase.bind(this);
+		this.reset = this.reset.bind(this);
 
 		this.state = {
-			size: 16
+			size: Number(this.props.size)
 		}
 	}
 
@@ -17,6 +19,11 @@ class FontChooser extends React.Component {
 	increase() {
 		const i = this.state.size;
 		this.setState({ size: this.state.size < this.props.max ? i + 1 : i })
+	}
+
+	reset() {
+		const r = Number(this.props.size);
+		this.setState({ size: r })
 	}
 	
 	render() {
@@ -44,7 +51,14 @@ class FontChooser extends React.Component {
 						style={{display: this.props.hidden === 'false' ? 'block' : 'none'}}
 						onClick={ () => this.decrease() }
 					>-</button>
-					<span id="fontSizeSpan" hidden={this.props.hidden} style={{margin: 'auto 5px', display: this.props.hidden === 'false' ? 'block' : 'none'}}>{this.state.size}</span>
+					<span 
+						id="fontSizeSpan" 
+						hidden={this.props.hidden}
+						onDoubleClick={ () => this.reset() }
+						style={{
+							margin: 'auto 5px', 
+							display: this.props.hidden === 'false' ? 'block' : 'none'
+						}}>{this.state.size}</span>
 					<button
 						id="increaseButton"
 						style={{display: this.props.hidden === 'false' ? 'block' : 'none'}}

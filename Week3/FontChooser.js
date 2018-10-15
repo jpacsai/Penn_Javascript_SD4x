@@ -55,7 +55,8 @@ class FontChooser extends React.Component {
 					id="textSpan"
 					style={{
 						fontSize: this.state.size,
-						fontWeight: this.state.weigth
+						fontWeight: this.props.bold === 'false' ? 'normal' : 'bold',
+						color: (this.state.size == this.props.min || this.state.size == this.props.max) ? 'red' : 'black'
 					}}>
 					{this.props.text}
 				</span>

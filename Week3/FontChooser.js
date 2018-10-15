@@ -45,23 +45,22 @@ class FontChooser extends React.Component {
 						type="checkbox" 
 						id="boldCheckbox" 
 						defaultChecked={ this.props.bold === 'false' ? false : true }
-						style={{display: this.props.hidden === 'false' ? 'block' : 'none'}}/>
+						style={{visibility: this.props.hidden === 'true' ? 'hidden' : 'visible'}}/>
 					<button 
 						id="decreaseButton"
-						style={{display: this.props.hidden === 'false' ? 'block' : 'none'}}
+						style={{visibility: this.props.hidden === 'true' ? 'hidden' : 'visible'}}
 						onClick={ () => this.decrease() }
 					>-</button>
 					<span 
 						id="fontSizeSpan" 
-						hidden={this.props.hidden}
 						onDoubleClick={ () => this.reset() }
 						style={{
 							margin: 'auto 5px', 
-							display: this.props.hidden === 'false' ? 'block' : 'none'
+							visibility: this.props.hidden === 'true' ? 'hidden' : 'visible'
 						}}>{this.state.size}</span>
 					<button
 						id="increaseButton"
-						style={{display: this.props.hidden === 'false' ? 'block' : 'none'}}
+						style={{visibility: this.props.hidden === 'true' ? 'hidden' : 'visible'}}
 						onClick={ () => this.increase() }
 					>+</button>
 				</div>

@@ -5,9 +5,23 @@ class FontChooser extends React.Component {
 		this.decrease = this.decrease.bind(this);
 		this.increase = this.increase.bind(this);
 		this.reset = this.reset.bind(this);
+		this.hideSwitch = this.hideSwitch.bind(this);
 
 		this.state = {
-			size: Number(this.props.size)
+			hidden: true,
+			weight: this.props.bold === 'true' ? 'bold' : 'normal',
+			size: Number(this.props.size) < Number(this.props.min) ? 
+				Number(this.props.min) < 1 ? 
+				1 : Number(this.props.min) : 
+				Number(this.props.size) > Number(this.props.max) ? 
+				Number(this.props.max) : Number(this.props.size),
+			min: Number(this.props.min) > Number(this.props.max) ? 
+				Number(this.props.max) < 1 ? 
+				1 : Number(this.props.max) : Number(this.props.min) < 1 ?
+				 1 : Number(this.props.min),
+			max: Number(this.props.max) < Number(this.props.min) ?
+				Number(this.props.min) < 1 ? 
+				1 : Number(this.props.min) : Number(this.props.max)
 		}
 	}
 
@@ -25,8 +39,29 @@ class FontChooser extends React.Component {
 		const r = Number(this.props.size);
 		this.setState({ size: r })
 	}
+
+	hideSwitch() {
+		const h = this.state.hidden === true ? false : true;
+		this.setState({ hidden: h })
+	}
+
+	boldSwitch() {
+		const b = this.state.weight === 'bold' ? 'normal' : 'bold'
+		this.setState({ weight: b })
+	}
 	
 	render() {
+
+		const textStyle = {
+			fontSize: this.state.size,
+			fontWeight: this.state.weight,
+			color: (this.state.size == this.props.min || this.state.size == this.props.max) ? 'red' : 'black'
+		}
+
+		const settingStyle = {
+			visibility: this.state.hidden === true ? 'hidden' : 'visible'
+		}
+
 		return(
 			<div 
 				style={{
@@ -45,32 +80,28 @@ class FontChooser extends React.Component {
 						type="checkbox" 
 						id="boldCheckbox" 
 						defaultChecked={ this.props.bold === 'false' ? false : true }
-						style={{visibility: this.props.hidden === 'true' ? 'hidden' : 'visible'}}/>
+						style={settingStyle}
+						onClick={ () => this.boldSwitch() }/>
 					<button 
 						id="decreaseButton"
-						style={{visibility: this.props.hidden === 'true' ? 'hidden' : 'visible'}}
+						style={settingStyle}
 						onClick={ () => this.decrease() }
 					>-</button>
 					<span 
 						id="fontSizeSpan" 
 						onDoubleClick={ () => this.reset() }
-						style={{
-							margin: 'auto 5px', 
-							visibility: this.props.hidden === 'true' ? 'hidden' : 'visible'
-						}}>{this.state.size}</span>
+						style={settingStyle}
+					>{this.state.size}</span>
 					<button
 						id="increaseButton"
-						style={{visibility: this.props.hidden === 'true' ? 'hidden' : 'visible'}}
+						style={settingStyle}
 						onClick={ () => this.increase() }
 					>+</button>
 				</div>
 				<span
+					onClick={ () => this.hideSwitch() }
 					id="textSpan"
-					style={{
-						fontSize: this.state.size,
-						fontWeight: this.props.bold === 'false' ? 'normal' : 'bold',
-						color: (this.state.size == this.props.min || this.state.size == this.props.max) ? 'red' : 'black'
-					}}>
+					style={textStyle}>
 					{this.props.text}
 				</span>
 			</div>

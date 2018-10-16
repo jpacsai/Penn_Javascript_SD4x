@@ -21,7 +21,7 @@ Server-side JavaScript is becoming more prevalent in the industry, with web fram
  
 ### Week 3: Client-Side Frameworks for Developing Modular Web Page Components  
   - Developing Web Applications with React
-  - [ ] **Homework 4:** develop a React component that allows the reader of a web page to change the appearance of a piece of text
+  - [x] [**Homework 4:**](https://github.com/jpacsai/PennX_Javascript_SD4x/blob/master/Week3/FontChooser.js) develop a React component that allows the reader of a web page to change the appearance of a piece of text
   - Advanced Component Design for React
   - [ ] **Homework 5:** develop a simple application to track lists of items using React
   - Advanced Component Design for React

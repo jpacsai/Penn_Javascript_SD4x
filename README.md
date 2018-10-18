@@ -23,7 +23,7 @@ Server-side JavaScript is becoming more prevalent in the industry, with web fram
   - Developing Web Applications with React
   - [x] [**Homework 4:**](https://github.com/jpacsai/PennX_Javascript_SD4x/blob/master/Week3/FontChooser.js) develop a React component that allows the reader of a web page to change the appearance of a piece of text
   - Advanced Component Design for React
-  - [ ] **Homework 5:** develop a simple application to track lists of items using React
+  - [x] [**Homework 5:**](https://github.com/jpacsai/List_tracker) develop a simple application to track lists of items using React
   - Advanced Component Design for React
   - Creating Data-Driven Web Content with D3.js
     
